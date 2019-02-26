@@ -54,9 +54,14 @@ AUDIT_LOGS_TABLENAME = 'scheduler_jobauditlog'
 
 # SQLite
 #
-DATABASE_CLASS = 'ndscheduler.core.datastore.providers.sqlite.DatastoreSqlite'
+DATABASE_CLASS = 'ndscheduler.core.datastore.providers.postgresql.DatastorePostgresql'
 DATABASE_CONFIG_DICT = {
-    'file_path': 'datastore.db'
+    'user': 'dchaplinsky',
+    'password': '',
+    'hostname': 'localhost',
+    'port': 5432,
+    'database': 'scheduler_test',
+    'sslmode': 'disable'
 }
 
 # Postgres

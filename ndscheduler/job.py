@@ -103,6 +103,7 @@ class JobBase:
         :param args:
         :param kwargs:
         """
+
         scheduler = scheduler_manager.SchedulerManager.get_instance()
         datastore = scheduler.get_datastore()
         try:
